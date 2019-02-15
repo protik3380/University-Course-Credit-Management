@@ -1,0 +1,90 @@
+﻿@model Final_Project.Models.RoomAllocation
+
+@{
+    ViewBag.Title = "UnallocateRoom";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section css
+{
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/2.0.3/jquery-confirm.min.css">
+}
+<div class="form-w3layouts">
+    <div class="row">
+        <div class="col-lg-12">
+            <section class="panel">
+                <header class="panel-heading">
+                    Unallocate All Classrooms
+                </header>
+                <div class="panel-body">
+                    <div class="position-center">
+
+                        @using (Html.BeginForm())
+                        {
+                            @Html.AntiForgeryToken()
+
+                            <div class="form-group" style="text-align: center">
+                                <input type="button" value="Unallocate All Rooms" id="UnallocateRooms" class="btn btn-lg btn-primary" />
+                            </div>
+                        }
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+
+    </div>
+
+</div>
+@section scripts
+{
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/2.0.3/jquery-confirm.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#UnallocateRooms").click(function () {
+
+                var r = confirm("Are you sure to unallocate all classrooms info?");
+                if (r == true) {
+
+                    var jsnFormatData = { name: r};
+                    $.ajax({
+                        type: "POST",
+                        url: '@Url.Action("UnallocateAllRooms", "RoomAllocation")',
+                        contentType: "application/json; charset=utf-8",
+                        data: JSON.stringify(jsnFormatData),
+                        dataType: "json",
+                        success: function (data) {
+
+                            if (data == true) {
+                                // alert("All rooms unallocated successffully!");
+                                $.alert({
+                                    title: 'Success',
+                                    content: 'All room unallocated successffully'
+
+
+                                });
+                            } else {
+                                // alert("No rooms are available to unallocate");
+                                $.alert({
+                                    title: 'Warning',
+                                    content: 'No rooms are available to unallocate'
+                                });
+                            }
+                        }
+                    });
+
+                }
+                return false;
+
+            });
+        });
+
+    </script>
+
+}

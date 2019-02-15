@@ -1,0 +1,85 @@
+﻿@model Final_Project.Models.Student
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="form-w3layouts">
+<div class="row">
+<div class="col-lg-12">
+<section class="panel">
+<header class="panel-heading">
+   View Student Details
+</header>
+<div class="panel-body">
+    <div class="position-center">
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.d.DepartmentCode)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.d.DepartmentCode)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.StudentName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.StudentName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ContactNo)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ContactNo)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Date)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Date)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Address)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Address)
+            </dd>
+
+            <dt style="color: red">
+                @Html.DisplayNameFor(model => model.RegistrationId)
+            </dt>
+
+            <dd style="color: red">
+                @Html.DisplayFor(model => model.RegistrationId)
+            </dd>
+
+        </dl>
+   
+    </div>
+    <a href="@Url.Action("Create","Students")" data-toggle="modal" class="btn btn-success">
+        Back to Registration
+    </a>
+                </div>
+            </section>
+        </div>
+    
+    </div>
+</div>

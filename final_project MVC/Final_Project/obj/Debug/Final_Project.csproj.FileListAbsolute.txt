@@ -1,0 +1,294 @@
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\bin\Final_Project.dll.config
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\bin\Final_Project.dll
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\bin\Final_Project.pdb
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\bin\Antlr3.Runtime.dll
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\bin\EntityFramework.dll
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\bin\EntityFramework.SqlServer.dll
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\bin\Microsoft.AspNet.Identity.Core.dll
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\bin\Microsoft.AspNet.Identity.Owin.dll
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\bin\Microsoft.Owin.dll
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\bin\Microsoft.Owin.Host.SystemWeb.dll
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\bin\Microsoft.Owin.Security.Cookies.dll
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\bin\Microsoft.Owin.Security.dll
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\bin\Microsoft.Owin.Security.Facebook.dll
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\bin\Microsoft.Owin.Security.Google.dll
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\bin\Microsoft.Owin.Security.OAuth.dll
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\bin\Microsoft.Owin.Security.Twitter.dll
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\bin\Microsoft.Web.Infrastructure.dll
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\bin\Newtonsoft.Json.dll
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\bin\Owin.dll
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\bin\System.Web.Helpers.dll
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\bin\System.Web.Mvc.dll
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\bin\System.Web.Optimization.dll
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\bin\System.Web.Razor.dll
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\bin\System.Web.WebPages.Deployment.dll
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\bin\System.Web.WebPages.dll
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\bin\System.Web.WebPages.Razor.dll
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\bin\WebGrease.dll
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\bin\System.Web.Helpers.xml
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\bin\System.Web.Mvc.xml
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\bin\System.Web.Optimization.xml
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\bin\System.Web.Razor.xml
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\bin\System.Web.WebPages.xml
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\bin\System.Web.WebPages.Deployment.xml
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\bin\System.Web.WebPages.Razor.xml
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\bin\Antlr3.Runtime.pdb
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\bin\Newtonsoft.Json.xml
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\bin\EntityFramework.xml
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\bin\EntityFramework.SqlServer.xml
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\bin\Microsoft.AspNet.Identity.Core.xml
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\bin\Microsoft.AspNet.Identity.Owin.xml
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\bin\Microsoft.Owin.xml
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\bin\Microsoft.Owin.Host.SystemWeb.xml
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\bin\Microsoft.Owin.Security.xml
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\bin\Microsoft.Owin.Security.Facebook.xml
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\bin\Microsoft.Owin.Security.Cookies.xml
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\bin\Microsoft.Owin.Security.OAuth.xml
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\bin\Microsoft.Owin.Security.Google.xml
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\bin\Microsoft.Owin.Security.Twitter.xml
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\obj\Debug\Final_Project.csprojResolveAssemblyReference.cache
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\obj\Debug\Final_Project.dll
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\obj\Debug\Final_Project.pdb
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\bin\Vereyon.Web.FlashMessage.dll
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\obj\Debug\Final_Project.Migrations.feature4.resources
+c:\users\protik\documents\visual studio 2013\Projects\Final_Project\Final_Project\obj\Debug\Final_Project.csproj.GenerateResource.Cache
+G:\Final_Project\Final_Project\bin\Final_Project.dll.config
+G:\Final_Project\Final_Project\bin\Final_Project.dll
+G:\Final_Project\Final_Project\bin\Final_Project.pdb
+G:\Final_Project\Final_Project\bin\Antlr3.Runtime.dll
+G:\Final_Project\Final_Project\bin\EntityFramework.dll
+G:\Final_Project\Final_Project\bin\EntityFramework.SqlServer.dll
+G:\Final_Project\Final_Project\bin\Microsoft.AspNet.Identity.Core.dll
+G:\Final_Project\Final_Project\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+G:\Final_Project\Final_Project\bin\Microsoft.AspNet.Identity.Owin.dll
+G:\Final_Project\Final_Project\bin\Microsoft.Owin.dll
+G:\Final_Project\Final_Project\bin\Microsoft.Owin.Host.SystemWeb.dll
+G:\Final_Project\Final_Project\bin\Microsoft.Owin.Security.Cookies.dll
+G:\Final_Project\Final_Project\bin\Microsoft.Owin.Security.dll
+G:\Final_Project\Final_Project\bin\Microsoft.Owin.Security.Facebook.dll
+G:\Final_Project\Final_Project\bin\Microsoft.Owin.Security.Google.dll
+G:\Final_Project\Final_Project\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+G:\Final_Project\Final_Project\bin\Microsoft.Owin.Security.OAuth.dll
+G:\Final_Project\Final_Project\bin\Microsoft.Owin.Security.Twitter.dll
+G:\Final_Project\Final_Project\bin\Microsoft.Web.Infrastructure.dll
+G:\Final_Project\Final_Project\bin\Newtonsoft.Json.dll
+G:\Final_Project\Final_Project\bin\Owin.dll
+G:\Final_Project\Final_Project\bin\System.Web.Helpers.dll
+G:\Final_Project\Final_Project\bin\System.Web.Mvc.dll
+G:\Final_Project\Final_Project\bin\System.Web.Optimization.dll
+G:\Final_Project\Final_Project\bin\System.Web.Razor.dll
+G:\Final_Project\Final_Project\bin\System.Web.WebPages.Deployment.dll
+G:\Final_Project\Final_Project\bin\System.Web.WebPages.dll
+G:\Final_Project\Final_Project\bin\System.Web.WebPages.Razor.dll
+G:\Final_Project\Final_Project\bin\Vereyon.Web.FlashMessage.dll
+G:\Final_Project\Final_Project\bin\WebGrease.dll
+G:\Final_Project\Final_Project\bin\System.Web.Helpers.xml
+G:\Final_Project\Final_Project\bin\System.Web.Mvc.xml
+G:\Final_Project\Final_Project\bin\System.Web.Optimization.xml
+G:\Final_Project\Final_Project\bin\System.Web.Razor.xml
+G:\Final_Project\Final_Project\bin\System.Web.WebPages.xml
+G:\Final_Project\Final_Project\bin\System.Web.WebPages.Deployment.xml
+G:\Final_Project\Final_Project\bin\System.Web.WebPages.Razor.xml
+G:\Final_Project\Final_Project\bin\Antlr3.Runtime.pdb
+G:\Final_Project\Final_Project\bin\Newtonsoft.Json.xml
+G:\Final_Project\Final_Project\bin\EntityFramework.xml
+G:\Final_Project\Final_Project\bin\EntityFramework.SqlServer.xml
+G:\Final_Project\Final_Project\bin\Microsoft.AspNet.Identity.Core.xml
+G:\Final_Project\Final_Project\bin\Microsoft.AspNet.Identity.Owin.xml
+G:\Final_Project\Final_Project\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+G:\Final_Project\Final_Project\bin\Microsoft.Owin.xml
+G:\Final_Project\Final_Project\bin\Microsoft.Owin.Host.SystemWeb.xml
+G:\Final_Project\Final_Project\bin\Microsoft.Owin.Security.xml
+G:\Final_Project\Final_Project\bin\Microsoft.Owin.Security.Facebook.xml
+G:\Final_Project\Final_Project\bin\Microsoft.Owin.Security.Cookies.xml
+G:\Final_Project\Final_Project\bin\Microsoft.Owin.Security.OAuth.xml
+G:\Final_Project\Final_Project\bin\Microsoft.Owin.Security.Google.xml
+G:\Final_Project\Final_Project\bin\Microsoft.Owin.Security.Twitter.xml
+G:\Final_Project\Final_Project\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+G:\Final_Project\Final_Project\obj\Debug\Final_Project.csprojResolveAssemblyReference.cache
+G:\Final_Project\Final_Project\obj\Debug\Final_Project.dll
+G:\Final_Project\Final_Project\obj\Debug\Final_Project.pdb
+G:\Final_Project\Final_Project\obj\Debug\Final_Project.Migrations.feature5.resources
+G:\Final_Project\Final_Project\obj\Debug\Final_Project.csproj.GenerateResource.Cache
+C:\Users\Protik\Desktop\Final_Project\Final_Project\bin\Final_Project.dll.config
+C:\Users\Protik\Desktop\Final_Project\Final_Project\bin\Final_Project.dll
+C:\Users\Protik\Desktop\Final_Project\Final_Project\bin\Final_Project.pdb
+C:\Users\Protik\Desktop\Final_Project\Final_Project\bin\Antlr3.Runtime.dll
+C:\Users\Protik\Desktop\Final_Project\Final_Project\bin\EntityFramework.dll
+C:\Users\Protik\Desktop\Final_Project\Final_Project\bin\EntityFramework.SqlServer.dll
+C:\Users\Protik\Desktop\Final_Project\Final_Project\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Protik\Desktop\Final_Project\Final_Project\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Protik\Desktop\Final_Project\Final_Project\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Protik\Desktop\Final_Project\Final_Project\bin\Microsoft.Owin.dll
+C:\Users\Protik\Desktop\Final_Project\Final_Project\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Protik\Desktop\Final_Project\Final_Project\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Protik\Desktop\Final_Project\Final_Project\bin\Microsoft.Owin.Security.dll
+C:\Users\Protik\Desktop\Final_Project\Final_Project\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Protik\Desktop\Final_Project\Final_Project\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Protik\Desktop\Final_Project\Final_Project\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Protik\Desktop\Final_Project\Final_Project\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Protik\Desktop\Final_Project\Final_Project\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Protik\Desktop\Final_Project\Final_Project\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Protik\Desktop\Final_Project\Final_Project\bin\Newtonsoft.Json.dll
+C:\Users\Protik\Desktop\Final_Project\Final_Project\bin\Owin.dll
+C:\Users\Protik\Desktop\Final_Project\Final_Project\bin\System.Web.Helpers.dll
+C:\Users\Protik\Desktop\Final_Project\Final_Project\bin\System.Web.Mvc.dll
+C:\Users\Protik\Desktop\Final_Project\Final_Project\bin\System.Web.Optimization.dll
+C:\Users\Protik\Desktop\Final_Project\Final_Project\bin\System.Web.Razor.dll
+C:\Users\Protik\Desktop\Final_Project\Final_Project\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Protik\Desktop\Final_Project\Final_Project\bin\System.Web.WebPages.dll
+C:\Users\Protik\Desktop\Final_Project\Final_Project\bin\System.Web.WebPages.Razor.dll
+C:\Users\Protik\Desktop\Final_Project\Final_Project\bin\Vereyon.Web.FlashMessage.dll
+C:\Users\Protik\Desktop\Final_Project\Final_Project\bin\WebGrease.dll
+C:\Users\Protik\Desktop\Final_Project\Final_Project\bin\System.Web.Helpers.xml
+C:\Users\Protik\Desktop\Final_Project\Final_Project\bin\System.Web.Mvc.xml
+C:\Users\Protik\Desktop\Final_Project\Final_Project\bin\System.Web.Optimization.xml
+C:\Users\Protik\Desktop\Final_Project\Final_Project\bin\System.Web.Razor.xml
+C:\Users\Protik\Desktop\Final_Project\Final_Project\bin\System.Web.WebPages.xml
+C:\Users\Protik\Desktop\Final_Project\Final_Project\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Protik\Desktop\Final_Project\Final_Project\bin\System.Web.WebPages.Razor.xml
+C:\Users\Protik\Desktop\Final_Project\Final_Project\bin\Antlr3.Runtime.pdb
+C:\Users\Protik\Desktop\Final_Project\Final_Project\bin\Newtonsoft.Json.xml
+C:\Users\Protik\Desktop\Final_Project\Final_Project\bin\EntityFramework.xml
+C:\Users\Protik\Desktop\Final_Project\Final_Project\bin\EntityFramework.SqlServer.xml
+C:\Users\Protik\Desktop\Final_Project\Final_Project\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Protik\Desktop\Final_Project\Final_Project\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Protik\Desktop\Final_Project\Final_Project\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Protik\Desktop\Final_Project\Final_Project\bin\Microsoft.Owin.xml
+C:\Users\Protik\Desktop\Final_Project\Final_Project\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Protik\Desktop\Final_Project\Final_Project\bin\Microsoft.Owin.Security.xml
+C:\Users\Protik\Desktop\Final_Project\Final_Project\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Protik\Desktop\Final_Project\Final_Project\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Protik\Desktop\Final_Project\Final_Project\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Protik\Desktop\Final_Project\Final_Project\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Protik\Desktop\Final_Project\Final_Project\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Protik\Desktop\Final_Project\Final_Project\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Protik\Desktop\Final_Project\Final_Project\obj\Debug\Final_Project.csprojResolveAssemblyReference.cache
+C:\Users\Protik\Desktop\Final_Project\Final_Project\obj\Debug\Final_Project.dll
+C:\Users\Protik\Desktop\Final_Project\Final_Project\obj\Debug\Final_Project.pdb
+C:\Users\Protik\Desktop\Final_Project\Final_Project\obj\Debug\Final_Project.Migrations.f5.resources
+C:\Users\Protik\Desktop\Final_Project\Final_Project\obj\Debug\Final_Project.csproj.GenerateResource.Cache
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\obj\Debug\Final_Project.csprojResolveAssemblyReference.cache
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\obj\Debug\Final_Project.dll
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\obj\Debug\Final_Project.pdb
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\bin\Final_Project.dll.config
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\bin\Final_Project.dll
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\bin\Final_Project.pdb
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\bin\Antlr3.Runtime.dll
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\bin\EntityFramework.dll
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\bin\EntityFramework.SqlServer.dll
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\bin\Microsoft.Owin.dll
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\bin\Microsoft.Owin.Security.dll
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\bin\Newtonsoft.Json.dll
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\bin\Owin.dll
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\bin\System.Web.Helpers.dll
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\bin\System.Web.Mvc.dll
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\bin\System.Web.Optimization.dll
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\bin\System.Web.Razor.dll
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\bin\System.Web.WebPages.dll
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\bin\System.Web.WebPages.Razor.dll
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\bin\Vereyon.Web.FlashMessage.dll
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\bin\WebGrease.dll
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\bin\System.Web.Helpers.xml
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\bin\System.Web.Mvc.xml
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\bin\System.Web.Optimization.xml
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\bin\System.Web.Razor.xml
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\bin\System.Web.WebPages.xml
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\bin\System.Web.WebPages.Razor.xml
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\bin\Antlr3.Runtime.pdb
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\bin\Newtonsoft.Json.xml
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\bin\EntityFramework.xml
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\bin\EntityFramework.SqlServer.xml
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\bin\Microsoft.Owin.xml
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\bin\Microsoft.Owin.Security.xml
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\obj\Debug\Final_Project.Migrations.final.resources
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\obj\Debug\Final_Project.csproj.GenerateResource.Cache
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\obj\Debug\Final_Project.Migrations.enrollunassign.resources
+C:\Users\Protik\Desktop\final_project_entity_error\Final_Project\obj\Debug\Final_Project.Migrations.enrrrrolll.resources
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\bin\Final_Project.dll.config
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\bin\Final_Project.dll
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\bin\Final_Project.pdb
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\bin\Antlr3.Runtime.dll
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\bin\EntityFramework.dll
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\bin\EntityFramework.SqlServer.dll
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\bin\Microsoft.Owin.dll
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\bin\Microsoft.Owin.Security.dll
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\bin\Newtonsoft.Json.dll
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\bin\Owin.dll
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\bin\System.Web.Helpers.dll
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\bin\System.Web.Mvc.dll
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\bin\System.Web.Optimization.dll
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\bin\System.Web.Razor.dll
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\bin\System.Web.WebPages.dll
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\bin\System.Web.WebPages.Razor.dll
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\bin\Vereyon.Web.FlashMessage.dll
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\bin\WebGrease.dll
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\bin\System.Web.Helpers.xml
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\bin\System.Web.Mvc.xml
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\bin\System.Web.Optimization.xml
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\bin\System.Web.Razor.xml
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\bin\System.Web.WebPages.xml
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\bin\System.Web.WebPages.Razor.xml
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\bin\Antlr3.Runtime.pdb
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\bin\Newtonsoft.Json.xml
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\bin\EntityFramework.xml
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\bin\EntityFramework.SqlServer.xml
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\bin\Microsoft.Owin.xml
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\bin\Microsoft.Owin.Security.xml
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\obj\Debug\Final_Project.csprojResolveAssemblyReference.cache
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\obj\Debug\Final_Project.Migrations.final.resources
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\obj\Debug\Final_Project.Migrations.enrollunassign.resources
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\obj\Debug\Final_Project.Migrations.enrrrrolll.resources
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\obj\Debug\Final_Project.csproj.GenerateResource.Cache
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\obj\Debug\Final_Project.dll
+C:\Users\Protik\Desktop\final_project MVC\Final_Project\obj\Debug\Final_Project.pdb

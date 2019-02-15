@@ -1,0 +1,270 @@
+﻿@using Vereyon.Web
+@model Final_Project.Models.AssignCourse
+
+@{
+    ViewBag.Title = "Assign Course";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section css
+{
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css">
+}
+
+<div class="form-w3layouts">
+    <div class="row">
+        <div class="col-lg-12">
+            <section class="panel">
+                <header class="panel-heading">
+                    Course Assign to Teacher
+                </header>
+                <div class="panel-body">
+                    <div class="position-center">
+
+                        @using (Html.BeginForm())
+                        {
+                             @Html.RenderFlashMessages()
+                             @Html.AntiForgeryToken()
+    
+
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.DepartmentId)
+                                @Html.DropDownList("DepartmentId", null, "--Select Department--", htmlAttributes: new { @class = "form-control" })
+                               @* @Html.ValidationMessage("DeptErrorLabel", "", new { @class = "text-danger" })*@
+                                <label id="DeptErrorLabel" style="color: red;"></label>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.TeacherId)
+                                <select class="form-control" id="TeacherId" name="TeacherId">
+                                                                     
+                                </select>
+                               @* @Html.ValidationMessage("TeacherErrorLabel", "", new { @class = "text-danger" })*@
+                                <label id="TeacherErrorLabel" style="color: red;"></label>
+
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.TakenCredit)
+                                @Html.EditorFor(model => model.TakenCredit, new { htmlAttributes = new { @class = "form-control" } })
+                               
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.RemainingCredit)
+                                @Html.EditorFor(model => model.RemainingCredit, new { htmlAttributes = new { @class = "form-control" } })
+                                
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.CourseId)
+                                <select class="form-control" id="CourseId" name="CourseId">
+                                                                     
+                                </select>
+                              @*  @Html.ValidationMessage("CourseErrorLabel", "", new { @class = "text-danger" })*@
+                                <label id="CourseErrorLabel" style="color: red;"></label>
+
+                            </div>
+                            
+                            <div class="form-group">
+                                @Html.Label("CourseName")
+                                @Html.Editor("CourseName", new { htmlAttributes = new { @class = "form-control"} })
+                              
+                            </div>
+                            
+                            <div class="form-group">
+                                @Html.Label("Credit")
+                                @Html.Editor("Credit", new { htmlAttributes = new { @class = "form-control" } })
+                            
+                            </div>                                                       
+                            <div class="form-group">
+                                <input type="submit" value="Assign" class="btn btn-primary" id="Submit" />
+                            </div>
+                        }
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </div>
+</div>
+
+
+@section scripts
+{
+
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+
+        $("#DepartmentId").change(function () {
+            ResetLabel();
+            var departmentId = $("#DepartmentId").val();
+            var jsnFormatData = { deptId: departmentId };
+            $("#TeacherId").empty();
+            $("#TeacherId").append('<option value=0>Select Teacher</option>');
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("GetTeachersByDeptId", "AssignCourse")',
+                contentType: "application/json; charset=utf-8",
+                data: JSON.stringify(jsnFormatData),
+                dataType: "json",
+                success: function(data) {
+
+                    $.each(data, function(key, value) {
+                        $("#TeacherId").append('<option value=' + value.TeacherId + '>' + value.TeacherName + '</option>');
+                    });
+                }
+            });
+
+            $("#CourseId").empty();
+            $("#CourseId").append('<option value=0>Select Course Code</option>');
+            jsnFormatData = { deptId: departmentId };
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("GetCoursesByDeptId", "AssignCourse")',
+                contentType: "application/json; charset=utf-8",
+                data: JSON.stringify(jsnFormatData),
+                dataType: "json",
+                success: function(dataa) {
+
+                    $.each(dataa, function(key1, value1) {
+                        $("#CourseId").append('<option value=' + value1.CourseId + '>' + value1.CourseCode + '</option>');
+                    });
+                }
+            });
+            return false;
+        });
+
+        $("#TeacherId").change(function () {
+            var teacherId = $("#TeacherId").val();
+            var jsnFormatData = { teacherId: teacherId };
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("GetTeachersById", "AssignCourse")',
+                contentType: "application/json; charset=utf-8",
+                data: JSON.stringify(jsnFormatData),
+                dataType: "json",
+                success: function(data) {
+                    $("#TakenCredit").val(data.TakenCredit);
+                    $("#RemainingCredit").val(data.RemainingCredit);
+                }
+            });
+            if (teacherId == 0) {
+                $("#RemainingCredit").val("");
+                $("#TakenCredit").val("");
+            }
+            return false;
+        });
+
+        $("#CourseId").change(function() {
+            var courseId = $("#CourseId").val();
+            var jsnFormatData = { courseId: courseId };
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("GetCourseById", "AssignCourse")',
+                contentType: "application/json; charset=utf-8",
+                data: JSON.stringify(jsnFormatData),
+                dataType: "json",
+                success: function(data) {
+                    $("#CourseName").val(data.CourseName);
+                    $("#Credit").val(data.Credit);
+                }
+            });
+            if (courseId == 0) {
+                $("#CourseName").val("");
+                $("#Credit").val("");
+            }
+            return false;
+        });
+
+        $("#Submit").click(function () {
+            var errorValue = 0;
+            var departmentId = $("#DepartmentId").val();
+
+            if (departmentId == 0) {
+                $("#DeptErrorLabel").text("Select One Department!");
+                errorValue = 1;
+            }
+
+            var teacherId = $("#TeacherId").val();
+
+            if (teacherId == 0) {
+                $("#TeacherErrorLabel").text("Select One Teacher!");
+                errorValue = 1;
+            }
+
+            var courseId = $("#CourseId").val();
+            if (courseId == 0) {
+                $("#CourseErrorLabel").text("Select One Course!");
+                errorValue = 1;
+            }
+            if (errorValue == 1) {
+                return false;
+            } else {
+
+                var remCr = $("#RemainingCredit").val() - $("#Credit").val();
+                var r = false;
+                if (remCr < 0) {                  
+                  r = confirm("The Teacher has alreay too many Credits. Do You assign More...");
+                }
+                if (r == true || remCr > 0 || remCr==0) {
+                    
+                    var tC = $("#TakenCredit").val();
+
+                    var jsnFormatData = { DepartmentId: departmentId, TeacherId: teacherId, CourseId: courseId, TakenCredit: tC, RemainingCredit: remCr };
+                    $.ajax({
+                        type: "POST",
+                        url: '@Url.Action("SaveAssignCourse", "AssignCourse")',
+                        contentType: "application/json; charset=utf-8",
+                        data: JSON.stringify(jsnFormatData),
+                        dataType: "json",
+                        success: function(data) {
+
+                            if (data == true)
+                               // alert("Successfully Assigned");
+                                $.alert({
+                                   title: 'Conframation!',
+                                   content: 'Successfully Assigned!',
+                                });
+                            else {
+                                $.alert({
+                                    title: 'Alert!',
+                                    content: 'Course is already Assigned',
+                                });
+                                //alert("Course is already Assigned");
+                            }
+                            Reset();
+                        }
+                    });
+
+                }
+                    return false;
+                }
+
+            });
+            return false;
+    });
+
+        function Reset() {
+            $("#RemainingCredit").val("");
+            $("#TakenCredit").val("");
+            $("#CourseId").empty();
+            $("#TeacherId").empty();
+            $("#CourseName").val("");
+            $("#Credit").val("");
+            $("#DepartmentId").prop("selectedIndex", 0);
+        }
+    function ResetLabel() {
+        $("#DeptErrorLabel").text("");
+        $("#TeacherErrorLabel").text("");
+        $("#CourseErrorLabel").text("");
+    }
+
+</script>
+}
+

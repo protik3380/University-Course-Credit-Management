@@ -1,0 +1,156 @@
+﻿@model Final_Project.Models.EnrollCourse
+
+@{
+    ViewBag.Title = "ViewResult";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="form-w3layouts">
+    <div class="row">
+        <div class="col-lg-12">
+            <section class="panel">
+                <header class="panel-heading">
+                    View Student Result
+                </header>
+                <div class="panel-body">
+                    <div class="position-center">
+
+                        @using (Html.BeginForm(null, null, FormMethod.Post, new { id = "saveResultForm" }))
+                        {
+                            @Html.AntiForgeryToken()
+
+
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.RegistrationId)
+                                <select name="RegistrationId" class="form-control" id="RegistrationId">
+                                    <option value="">--Select Registration No---</option>
+                                    @foreach (var student in ViewBag.StudentList)
+                                    {
+                                        <option value="@student.RegistrationId">@student.RegistrationId</option>
+                                    }
+                                </select>
+                                @Html.ValidationMessageFor(model => model.RegistrationId, "", new { @class = "text-danger" })
+                            </div>
+
+                            <div class="form-group">
+                                @Html.Label("Name")
+                                <input type="text" name="name" id="name" readonly="" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                @Html.Label("Email")
+                                <input type="text" name="email" id="email" readonly="" class="form-control" />
+                            </div>
+
+                            <div class="form-group">
+                                @Html.Label("Department")
+                                <input type="text" name="department" class="form-control" id="department" readonly="" />
+                            </div>
+
+
+
+
+                            <div class="form-group">
+                                <a href="#" onclick="HTMLtoPDF()" class="btn btn-primary">Export To Pdf</a>
+                            </div>
+
+                            <div class="container" id="HTMLtoPDF">
+                                <h3 id="Sname" style="text-align: center"></h3>
+                                <h3 id="Semail" style="text-align: center"></h3>
+                                <h3 id="Sdept" style="text-align: center"></h3>
+                                <h4 id="Sdate" style="text-align: center"></h4>
+                                <br/>
+                                                                         
+                                <table class="table table-bordered" id ="Report_table">
+                                    <thead>
+                                    <tr>
+                                        <th>Course Code</th>
+                                        <th>Name</th>
+                                        <th>Grade</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="tbody">
+                                    
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        }
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+
+    </div>
+
+</div>
+@section scripts
+{
+    <script src="~/Scripts/jspdf.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    <script src="~/Scripts/pdfFromHTML.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#Report").hide();
+            $("#RegistrationId").change(function() {
+                var regNo = $("#RegistrationId").val();
+                var jsnFormatData = { regNo: regNo };
+                var dNow = new Date();
+                var localdate = (dNow.getMonth() + 1) + '/' + dNow.getDate() + '/' + dNow.getFullYear() + '  time : ' + dNow.getHours() + ':' + dNow.getMinutes();
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("GetStudentById", "EnrollCourse")',
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify(jsnFormatData),
+                    dataType: "json",
+                    success: function(data) {
+                        $.each(data,
+                            function(key, value) {
+                                $("#name").val(value.StudentName);
+                                $("#email").val(value.Email);
+                                $("#department").val(value.d.DepartmentName);
+                                $("#Report").show();
+                                $("#Sname").text(value.StudentName);
+                                $("#Semail").text(value.Email);
+                                $("#Sdept").text(value.d.DepartmentName);
+                                $("#Sdate").text("Result publish date:" + localdate);
+                                var jsnData = { regNo: regNo };
+                                $("#tbody").empty();
+                                $.ajax({
+                                    type: "POST",
+                                    url: '@Url.Action("GetCoursesbyRegNo", "EnrollCourse")',
+                                    contentType: "application/json; charset=utf-8",
+                                    data: JSON.stringify(jsnData),
+                                    dataType: "json",
+                                    success: function(dataa) {
+                                        $.each(dataa, function (key2, value2) {                                            
+                                            var gread = value2.GradeName;
+                                            if (gread == null) gread = 'Not Graded Yet';
+                                            $("#tbody").append('<tr><td>' + value2.Course.CourseCode + '</td><td>' + value2.Course.CourseName + '</td><td>' + gread + '</td></tr>');
+                                           
+                                        });
+                                    }
+                                });
+                            });
+
+
+                    }
+                });
+
+                return false;
+            });
+        });
+
+
+    </script>
+}
+        
+
+
+     

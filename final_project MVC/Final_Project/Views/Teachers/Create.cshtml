@@ -1,0 +1,100 @@
+﻿@using Vereyon.Web
+@model Final_Project.Models.Teacher
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="form-w3layouts">
+    <div class="row">
+        <div class="col-lg-12">
+            <section class="panel">
+                <header class="panel-heading">
+                    Add New Teacher
+                </header>
+                <div class="panel-body">
+                    <div class="position-center">
+                        @using (Html.BeginForm())
+                        {
+                            @Html.RenderFlashMessages()
+                            @Html.AntiForgeryToken()
+
+
+                                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.TeacherName)
+                                    
+                                        @Html.EditorFor(model => model.TeacherName, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.TeacherName, "", new { @class = "text-danger" })
+                                    
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Address)
+                                    
+                                        @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+                                    
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Email)
+                                   
+                                        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                                   
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.ContactNo)
+                                    
+                                        @Html.EditorFor(model => model.ContactNo, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.ContactNo, "", new { @class = "text-danger" })
+                                    
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.DesignationId)
+                                   
+                                        @Html.DropDownList("DesignationId", null,"--Select Designation--", htmlAttributes: new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.DesignationId, "", new { @class = "text-danger" })
+                                    
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.DepartmentId)
+                                    
+                                        @Html.DropDownList("DepartmentId", null,"--Select Department--" ,htmlAttributes: new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.DepartmentId, "", new { @class = "text-danger" })
+                                    
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.TakenCredit)
+                                    
+                                        @Html.EditorFor(model => model.TakenCredit, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.TakenCredit, "", new { @class = "text-danger" })
+                                    
+                                </div>
+
+                                <div class="form-group">
+                                    
+                                        <input type="submit" value="Create" class="btn btn-default" />
+                                    
+                                </div>
+                          
+                        }
+                    </div>
+                </div>
+            </section>
+        </div>
+    
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+}

@@ -1,0 +1,255 @@
+﻿@model Final_Project.Models.RoomAllocation
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section css
+{
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css">
+}
+<div class="form-w3layouts">
+    <div class="row">
+        <div class="col-lg-12">
+            <section class="panel">
+                <header class="panel-heading">
+                    Allocate Classrooms 
+                </header>
+                <div class="panel-body">
+                    <div class="position-center">
+
+                        @using (Html.BeginForm()) 
+                        {
+                            @Html.AntiForgeryToken()
+    
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.DepartmentId, "Department")
+                                <select name="DepartmentId" id="DepartmentId" class="form-control">
+                                    <option value=0>--Select Department--</option>
+                                    @foreach (var department in ViewBag.departments)
+                                    {
+                                        <option value="@department.DepartmentId">@department.DepartmentName</option>
+                                    }
+
+                                </select>
+                                <label id="DeptErrorLabel" style="color: red;"></label>                 
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.CourseId, "Course")
+                                <select name="CourseId" id="CourseId" class="form-control">
+                                    @*<option value=0>--Select Course--</option>*@
+
+
+                                </select>
+                                <label id="CourseErrorLabel" style="color: red;"></label>
+
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.RoomId, "Room")          
+                                <select name="RoomId" id="RoomId" class="form-control">
+                                    <option value=0>--Select Room--</option>
+                                    @foreach (var room in ViewBag.Rooms)
+                                    {
+                                        <option value="@room.RoomId">@room.Name</option>
+                                    }
+
+                                </select>
+                                <label id="RoomErrorLabel" style="color: red;"></label>            
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.DayId, "Day")          
+                                <select name="DayId" id="DayId" class="form-control">
+                                    <option value=0>--Select Day--</option>
+                                    @foreach (var day in ViewBag.Days)
+                                    {
+                                        <option value="@day.DayId">@day.Name</option>
+                                    }
+
+                                </select>
+                                <label id="DayErrorLabel" style="color: red;"></label>            
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.StartTime,"Form")
+                                <input type="time" id="StartTime" name="StartTime" class="form-control" /> 
+                                <label id="sTimeErrorLabel" style="color: red;"></label>
+                   
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.EndTime,"TO")
+                                <input type="time" id="EndTime" name="EndTime" class="form-control" />
+                                <label id="eTimeErrorLabel" style="color: red;"></label>
+               
+            
+                            </div>
+
+        
+
+                            <div class="form-group">          
+                                <input type="submit" id ="submit" value="Create" class="btn btn-default" />
+                            </div>
+    
+                        }
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+    
+
+    </div>
+
+</div>
+@section scripts
+{
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#DepartmentId").change(function() {
+
+                var departmentId = $("#DepartmentId").val();
+                var jsnFormatData = { deptId: departmentId };
+                $("#CourseId").empty();
+               $("#CourseId").append('<option value=0>--select any course--</option>');
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("GetCoursesByDeptId", "RoomAllocation")',
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify(jsnFormatData),
+                    dataType: "json",
+                    success:function(data) {
+                        $.each(data, function(key1, value1) {
+
+                            $("#CourseId").append('<option value=' + value1.CourseId + '>' + value1.CourseCode + '</option>');
+                            //loop
+                        });
+
+                        //sucessfun
+                    }
+                    //ajax
+                });
+
+                //change
+            });
+
+            $("#submit").click(function() {
+                var errorValue = 0;
+                ResetErrorLabel();
+                var departmentId = $("#DepartmentId").val();
+                if (departmentId == 0) {
+                    $("#DeptErrorLabel").text("Please select any department !!");
+                    errorValue = 1;
+                }
+                var courseId = $("#CourseId").val();
+                if (courseId == 0) {
+                    $("#CourseErrorLabel").text("Please select any Course !!");
+                    errorValue = 1;
+                }
+
+                var roomId = $("#RoomId").val();
+                if (roomId == 0) {
+                    $("#RoomErrorLabel").text("Please select any Room Number !!");
+                    errorValue = 1;
+                }
+
+                var dayId = $("#DayId").val();
+                if (dayId == 0) {
+                    $("#DayErrorLabel").text("Please select any Day !!");
+                    errorValue = 1;
+                }
+                var time = $("#StartTime").val();
+                if (time=="") {
+                    $("#sTimeErrorLabel").text("Start time is required !!!");
+                    errorValue = 1;
+                }
+                var hour = parseInt(time.substr(0, 2));
+               // alert(hour);
+                var minute = parseInt(time.substr(3, 5));
+               // alert(minute);
+                var stime = hour * 60 + minute;
+                //alert(stime);
+
+                time = $("#EndTime").val();
+                if (time == "") {
+                    $("#eTimeErrorLabel").text("End time is required !!!");
+                    errorValue = 1;
+                }
+
+                hour = parseInt(time.substr(0, 2));
+               // alert(hour);
+                minute = parseInt(time.substr(3, 5));
+               // alert(minute);
+                var etime = hour * 60 + minute;
+                //alert(etime);
+                if (errorValue==1) {
+                    return false;
+                }
+                if (stime==etime) {
+                    //alert("A Class Can Not be Done in Zero Minute ");
+                    $.alert({
+                        title: 'Warning!',
+                        content: 'A Class Can Not be Done in Zero Minute!!!!',
+                    });
+                    return false;
+                }
+                var jsnFormatData = { DepartmentId: departmentId, CourseId: courseId, RoomId: roomId, DayId: dayId, StartTime: stime, EndTime: etime };
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("SaveRoomSchedule", "RoomAllocation")',
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify(jsnFormatData),
+                    dataType: "json",
+                    success:function(data) {
+                        if (data == true) {
+                            //alert("Class schedule Saved sucessfully");
+                            $.alert({
+                                title: 'Confarmation!',
+                                content: 'Class schedule Saved sucessfully!!',
+                            });
+                            $("#DepartmentId").prop("selectedIndex", 0);
+                            $("#CourseId").empty();
+                            $("#RoomId").prop("selectedIndex", 0);
+                            $("#DayId").prop("selectedIndex", 0);
+                            $("#StartTime").val('mm/dd/yyyy');
+                            $("#EndTime").val('mm/dd/yyyy');
+                            return false;
+                        }
+                        else {
+                            //alert("Overlap Problem, Try to Change Time or Day.");
+                            $.alert({
+                                title: 'Warning!!!',
+                                content: 'Overlap Problem, Try to Change Time or Day.!!!!',
+                            });
+                            return false;
+                        }
+                    }
+                });
+                return false;
+
+            });
+            //ready
+        });
+        function ResetErrorLabel() {
+            $("#DeptErrorLabel").text("");
+            $("#CourseErrorLabel").text("");
+            $("#RoomErrorLabel").text("");
+            $("#DayErrorLabel").text("");
+            $("#sTimeErrorLabel").text("");
+            $("#eTimeErrorLabel").text("");
+        }
+    </script>
+
+
+
+}

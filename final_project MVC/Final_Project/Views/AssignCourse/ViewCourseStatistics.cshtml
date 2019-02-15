@@ -1,0 +1,97 @@
+﻿@model Final_Project.Models.AssignCourse
+@{
+    ViewBag.Title = "ViewCourseStatistics";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="form-w3layouts">
+<div class="row">
+<div class="col-lg-12">
+<section class="panel">
+<header class="panel-heading">
+    View Course Statistics
+</header>
+<div class="panel-body">
+<div class="position-center">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DepartmentId)
+            @Html.DropDownList("DepartmentId", null, "--Select Department--", htmlAttributes: new { @class = "form-control" })           
+            @* @Html.ValidationMessage("DeptErrorLabel", "", new { @class = "text-danger" })*@
+            <label id="DeptErrorLabel" style="color: red;"></label>
+        </div>          
+        <label id="messageLabel" style="color: red; font-weight: normal; font-size: 20px;"></label>
+        <div id="UpdatePanel">
+
+        </div>
+    }
+
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </div>
+</div>
+@section scripts
+{
+    
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+   <script>
+       $(document).ready(function () {          
+           $("#DepartmentId").change(function () {
+               var deptId = $("#DepartmentId").val();
+               $("#messageLabel").text("");
+               var jsnFormatData = { deptId: deptId };
+
+               $.ajax({
+                   type: "POST",
+                   url: '@Url.Action("CourseInfo", "AssignCourse")',
+                   contentType: "application/json; charset=utf-8",
+                   data: JSON.stringify(jsnFormatData),
+                   dataType: "json",
+                   success: function (dataa) {
+                       var tab = $('<table id="CourseTable" class="table">');
+                       var thead = $('<thead style="line-height: 30px; color: #ffffff; font-weight: normal; font-size: 16px;"></thead>');
+                       thead.append('<th style="text-align: center; border-right: 1px solid #ffffff;">Course Code</th>');
+                       thead.append('<th style="text-align: center; border-right: 1px solid #ffffff;">Course Title</th>');
+                       thead.append('<th style="text-align: center; border-right: 1px solid #ffffff;">Semester</th>');
+                       thead.append('<th style="text-align: center; border-right: 1px solid #ffffff;">Assign To</th>');
+
+                       thead.css('background-color', ' gray');
+                       tab.append(thead);
+
+                       var tablerow = false;
+                       $("#UpdatePanel").show();
+                       $.each(dataa, function (key2, value2) {
+                           var trow = $('<tr></tr>');
+                           var ass2 = value2.AssignTo;
+                           if (ass2 == null || ass2 == "") ass2 = 'Not Assigned Yet';
+                           trow.append('<td style="text-align: center; border-right: 1px solid #ffffff;">' + value2.CourseCode + '</td>');
+                           trow.append('<td style="text-align: center; border-right: 1px solid #ffffff;">' + value2.CourseName + '</td>');
+                           trow.append('<td style="text-align: center; border-right: 1px solid #ffffff;">' + value2.Semester.SemesterName + '</td>');
+                           trow.append('<td style="text-align: center; border-right: 1px solid #ffffff;">' + ass2 + '</td>');
+                           tab.append(trow);
+                           tablerow = true;
+                          
+                       });
+
+                       $("tr:odd", tab).css('background-color', '#F5F5F5');
+                       $("tr:even", tab).css('background-color', '#EEEEEE');
+                       $("#UpdatePanel").html(tab);
+                       if (tablerow === false) {
+                           $("#UpdatePanel").hide();
+                           if (deptId !== 0)
+                               $("#messageLabel").text("No Courses are Available in this Department.");
+                       }
+                   }
+               });
+               return false;
+           });
+       });
+</script>
+}

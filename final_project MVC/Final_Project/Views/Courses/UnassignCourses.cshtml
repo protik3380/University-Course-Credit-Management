@@ -1,0 +1,112 @@
+﻿@model Final_Project.Models.Course
+
+@{
+    ViewBag.Title = "UnassignCourses";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section css
+{
+    
+<link href="~/Content/jquery-confirm.min.css" rel="stylesheet" />
+}
+<div class="form-w3layouts">
+    <div class="row">
+        <div class="col-lg-12">
+            <section class="panel">
+                <header class="panel-heading">
+                    Unassign All Courses
+                </header>
+                <div class="panel-body">
+                    <div class="position-center">
+
+                        @using (Html.BeginForm())
+                        {
+                            @Html.AntiForgeryToken()
+
+                            <div class="form-group" style="text-align: center">
+                                <input type="button" value="unassign All Courses" id="UnassignCourse" class="btn btn-lg btn-primary" />
+                            </div>
+                        }
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+
+    </div>
+
+</div>
+@section scripts
+{
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>   
+<script src="~/Scripts/jquery-confirm.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#UnassignCourse").click(function () {
+
+                 var r = confirm("Are you sure to unassign all courses?");
+                
+                
+                //
+                //var r = false;
+                //r = $.confirm({
+                //    title: 'Warning',
+                //    content: 'Are you sure to unassign all courses?',
+                //    buttons: {
+                //        confirm: function () {
+                            
+                //        },
+                //        cancel: function () {
+                            
+                //        }
+                //    }
+                //});
+               // alert(r);
+                if (r === true) {
+
+                    var jsnFormatData = { name: r };
+                    $.ajax({
+                        type: "POST",
+                        url: '@Url.Action("UnassignAllCourses", "Courses")',
+                        contentType: "application/json; charset=utf-8",
+                        data: JSON.stringify(jsnFormatData),
+                        dataType: "json",
+                        success: function (data) {
+
+                            if (data === true) {
+                                // alert("All courses unassigned successffully!");
+                                $.alert({
+                                    title: 'Success',
+                                    content: 'All courses unassigned successffully'
+                                   
+                                   
+                                });
+                            }
+                            else
+                            {
+                               //  alert("No courses are available to unassgn");
+                                $.alert({
+                                    title: 'Warning',
+                                    content: 'No courses are available to unassgn'
+                                    
+
+                                });
+                            }
+                        }
+                    });
+
+                }
+                return false;
+
+
+            });
+        });
+
+    </script>
+
+}

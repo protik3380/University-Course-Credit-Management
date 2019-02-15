@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Final_Project.Models.Department>
+
+@{
+    ViewBag.Title = "Show Department";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div class="table-agile-info">
+
+    <div class="panel panel-default">
+
+        <div class="panel-heading">
+           View All Department
+        </div>
+        <div>
+            <table class="table" ui-jq="footable" ui-options='{
+        "paging": {
+          "enabled": true
+        },
+        "filtering": {
+          "enabled": true
+        },
+        "sorting": {
+          "enabled": true
+        }}'>
+                <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DepartmentCode)
+                    </th>
+                    <th></th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DepartmentName)
+                    </th>                 
+                </tr>
+                </thead>
+                <tbody>
+               
+                @foreach (var item in Model) {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DepartmentCode)
+                        </td>
+                        <td></td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DepartmentName)
+                        </td>
+
+                    </tr>
+                }
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
